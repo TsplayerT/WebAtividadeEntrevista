@@ -53,7 +53,9 @@ namespace FI.AtividadeEntrevista.DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.CommandText = NomeProcedure;
             foreach (var item in parametros)
+            {
                 comando.Parameters.Add(item);
+            }
 
             SqlDataAdapter adapter = new SqlDataAdapter(comando);
             DataSet ds = new DataSet();
